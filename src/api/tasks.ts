@@ -1,10 +1,6 @@
-const API = "http://localhost:3000";
+import { Task } from "../interfaces/task.interface";
 
-interface Task {
-  title: string;
-  description?: string;
-  done?: boolean;
-}
+const API = "http://localhost:3000/api";
 
 export const createTaskRequest = (task: Task) =>
   fetch(`${API}/tasks`, {
